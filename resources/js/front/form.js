@@ -1,6 +1,8 @@
 
 $forms.forEach(function(editor){
-    window[`editor${editor.id}`]?.setData(editor.body)
+   if(editor.body){
+        window[`editor${editor.id}`]?.setData(editor.body)
+   }
 })
 
 range(5).forEach(function(val) {
